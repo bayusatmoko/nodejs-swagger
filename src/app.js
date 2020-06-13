@@ -1,5 +1,5 @@
 import express from 'express';
-const testRouter = require('./routes/sum');
+const sumRouter = require('./routes/sum');
 import bodyParser from 'body-parser';
 const swaggerUi = require('swagger-ui-express');
 const swaggerSumDocument = require ('../swaggerSumDocument');
@@ -7,7 +7,7 @@ const swaggerSumDocument = require ('../swaggerSumDocument');
 const app = express();
 
 app.use(bodyParser.json());
-app.use('/sum', testRouter);
+app.use('/sum', sumRouter);
 app.use('/api-docs-sum', swaggerUi.serve, swaggerUi.setup(swaggerSumDocument));
 
 export default app;
