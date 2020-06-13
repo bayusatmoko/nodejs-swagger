@@ -3,7 +3,7 @@ const router = express.Router();
 
 router.post('/', function (req, res) {
     try {
-        const {firstNumber, secondNumber} = req.body
+        const { firstNumber, secondNumber } = req.body
         res.status(200)
         res.send({sum: firstNumber + secondNumber, message: 'Sukses'})
     } catch (e) {
